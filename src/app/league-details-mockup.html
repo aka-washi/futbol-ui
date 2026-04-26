@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>League Details - SoccerHub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+
+<body class="bg-[#F5F7FB]">
+
+<!-- NAVBAR -->
+<header class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Left -->
+    <div class="flex items-center gap-8">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-green-500 rounded-full flex items-center justify-center text-white">
+          <i class="fa-solid fa-futbol"></i>
+        </div>
+        <div>
+          <span class="font-semibold">SoccerHub</span>
+          <p class="text-xs text-green-500 -mt-1">Admin</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-6 text-sm text-gray-600">
+        <a>Dashboard</a>
+        <a class="font-semibold text-green-600 border-b-2 border-green-500 pb-1">Leagues</a>
+        <a>Seasons</a>
+        <a>Teams</a>
+        <a>Matches</a>
+        <a>Standings</a>
+        <a>Users</a>
+      </nav>
+    </div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-6 text-gray-500">
+      <div class="relative">
+        <i class="fa-regular fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">5</span>
+      </div>
+      <div class="text-sm">May 18, 2025</div>
+      <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm">AD</div>
+    </div>
+
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-6 py-6 space-y-6">
+
+<!-- Breadcrumb -->
+<p class="text-sm text-gray-400">Leagues &gt; Liga MX</p>
+
+<!-- League Header Card -->
+<div class="bg-white rounded-2xl p-6 shadow-sm flex justify-between items-center">
+
+  <div class="flex items-center gap-6">
+    <img src="https://picsum.photos/80" class="w-16 h-16 rounded-lg object-cover">
+
+    <div>
+      <h1 class="text-xl font-semibold">Liga MX</h1>
+      <p class="text-gray-500 text-sm">Mexico</p>
+    </div>
+
+    <div class="grid grid-cols-5 gap-6 text-sm text-gray-600 ml-6">
+      <div><p class="text-gray-400">League Type</p><p>Professional</p></div>
+      <div><p class="text-gray-400">Confederation</p><p>CONCACAF</p></div>
+      <div><p class="text-gray-400">Founded</p><p>1943</p></div>
+      <div><p class="text-gray-400">Teams</p><p>18</p></div>
+      <div><p class="text-gray-400">Current Season</p><p>Clausura 2025</p></div>
+    </div>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm">Active</span>
+    <button class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm">Edit League</button>
+    <button class="border px-3 py-2 rounded-lg text-sm">•••</button>
+  </div>
+
+</div>
+
+<!-- Tabs -->
+<div class="flex gap-6 text-sm border-b pb-2">
+  <span class="text-green-600 border-b-2 border-green-500 pb-2">Overview</span>
+  <span class="text-gray-400">Teams</span>
+  <span class="text-gray-400">Seasons</span>
+  <span class="text-gray-400">Matches</span>
+  <span class="text-gray-400">Standings</span>
+  <span class="text-gray-400">Settings</span>
+</div>
+
+<!-- CONTENT GRID -->
+<div class="grid grid-cols-3 gap-6">
+
+<!-- LEFT SIDE -->
+<div class="col-span-2 space-y-6">
+
+<!-- Teams Cards -->
+<div class="bg-white rounded-2xl p-5 shadow-sm">
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="font-semibold">Teams (18)</h2>
+    <div class="flex gap-2">
+      <button class="border px-3 py-1 rounded-lg text-sm">Manage Teams</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm">+ Add Team</button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-6 gap-4">
+    <div class="bg-gray-50 p-3 rounded-xl text-center">
+      <img src="https://picsum.photos/40?1" class="mx-auto mb-2">
+      <p class="text-sm">Club América</p>
+    </div>
+    <div class="bg-gray-50 p-3 rounded-xl text-center">
+      <img src="https://picsum.photos/40?2" class="mx-auto mb-2">
+      <p class="text-sm">Chivas</p>
+    </div>
+    <div class="bg-gray-50 p-3 rounded-xl text-center">
+      <img src="https://picsum.photos/40?3" class="mx-auto mb-2">
+      <p class="text-sm">Cruz Azul</p>
+    </div>
+    <div class="bg-gray-50 p-3 rounded-xl text-center">
+      <img src="https://picsum.photos/40?4" class="mx-auto mb-2">
+      <p class="text-sm">Pumas</p>
+    </div>
+    <div class="bg-gray-50 p-3 rounded-xl text-center">
+      <img src="https://picsum.photos/40?5" class="mx-auto mb-2">
+      <p class="text-sm">Tigres</p>
+    </div>
+    <div class="bg-gray-100 p-3 rounded-xl text-center flex items-center justify-center">
+      <span class="text-sm text-gray-500">+13 More</span>
+    </div>
+  </div>
+</div>
+
+<!-- Recent Matches -->
+<div class="bg-white rounded-2xl p-5 shadow-sm">
+  <div class="flex justify-between mb-4">
+    <h2 class="font-semibold">Recent Matches</h2>
+    <a class="text-sm text-blue-500">View All Matches</a>
+  </div>
+
+  <div class="space-y-3 text-sm">
+    <div class="flex justify-between">
+      <span>Club América 2 - 1 Chivas</span>
+      <span class="text-green-500">Completed</span>
+    </div>
+    <div class="flex justify-between">
+      <span>Tigres 3 - 0 Pumas</span>
+      <span class="text-green-500">Completed</span>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+<div class="space-y-6">
+
+<!-- Seasons -->
+<div class="bg-white rounded-2xl p-5 shadow-sm">
+  <div class="flex justify-between mb-4">
+    <h2 class="font-semibold">Seasons (5)</h2>
+    <button class="bg-green-600 text-white px-3 py-1 rounded-lg text-sm">+ Add Season</button>
+  </div>
+
+  <ul class="text-sm space-y-2">
+    <li class="flex justify-between">Clausura 2025 <span class="text-green-500">Active</span></li>
+    <li class="flex justify-between">Apertura 2024 <span class="text-blue-500">Completed</span></li>
+    <li class="flex justify-between">Clausura 2024 <span class="text-blue-500">Completed</span></li>
+  </ul>
+</div>
+
+<!-- Upcoming Matches -->
+<div class="bg-white rounded-2xl p-5 shadow-sm">
+  <div class="flex justify-between mb-4">
+    <h2 class="font-semibold">Upcoming Matches</h2>
+    <a class="text-sm text-blue-500">View Full Fixture</a>
+  </div>
+
+  <div class="space-y-4 text-sm">
+
+    <!-- Match Row -->
+    <div class="flex items-center justify-between">
+      <!-- Date Icon -->
+      <div class="w-12 h-12 rounded-xl bg-gray-100 flex flex-col items-center justify-center text-xs">
+        <span class="text-gray-500">May</span>
+        <span class="font-semibold">24</span>
+      </div>
+
+      <!-- Teams + Time -->
+      <div class="flex-1 flex items-center justify-between px-4">
+
+        <!-- Home Team -->
+        <div class="flex items-center gap-2">
+          <span>América</span>
+          <img src="https://picsum.photos/24?team1" class="w-6 h-6 rounded-full">
+        </div>
+
+        <!-- Time -->
+        <div class="text-gray-500 font-medium">19:00</div>
+
+        <!-- Away Team -->
+        <div class="flex items-center gap-2">
+          <img src="https://picsum.photos/24?team2" class="w-6 h-6 rounded-full">
+          <span>Chivas</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Match Row -->
+    <div class="flex items-center justify-between">
+      <div class="w-12 h-12 rounded-xl bg-gray-100 flex flex-col items-center justify-center text-xs">
+        <span class="text-gray-500">May</span>
+        <span class="font-semibold">25</span>
+      </div>
+
+      <div class="flex-1 flex items-center justify-between px-4">
+        <div class="flex items-center gap-2">
+          <span>Tigres</span>
+          <img src="https://picsum.photos/24?team3" class="w-6 h-6 rounded-full">
+        </div>
+
+        <div class="text-gray-500 font-medium">21:00</div>
+
+        <div class="flex items-center gap-2">
+          <img src="https://picsum.photos/24?team4" class="w-6 h-6 rounded-full">
+          <span>Pumas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Match Row -->
+    <div class="flex items-center justify-between">
+      <div class="w-12 h-12 rounded-xl bg-gray-100 flex flex-col items-center justify-center text-xs">
+        <span class="text-gray-500">May</span>
+        <span class="font-semibold">26</span>
+      </div>
+
+      <div class="flex-1 flex items-center justify-between px-4">
+        <div class="flex items-center gap-2">
+          <span>Cruz Azul</span>
+          <img src="https://picsum.photos/24?team5" class="w-6 h-6 rounded-full">
+        </div>
+
+        <div class="text-gray-500 font-medium">17:00</div>
+
+        <div class="flex items-center gap-2">
+          <img src="https://picsum.photos/24?team6" class="w-6 h-6 rounded-full">
+          <span>Monterrey</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<!-- Bottom Stats -->
+<div class="grid grid-cols-6 gap-4">
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">306<br><span class="text-xs text-gray-500">Matches</span></div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">842<br><span class="text-xs text-gray-500">Goals</span></div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">2.76<br><span class="text-xs text-gray-500">Avg Goals</span></div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">56<br><span class="text-xs text-gray-500">Yellow Cards</span></div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">8<br><span class="text-xs text-gray-500">Red Cards</span></div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">92%<br><span class="text-xs text-gray-500">Completed</span></div>
+</div>
+
+</main>
+
+</body>
+</html>
