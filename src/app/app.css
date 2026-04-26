@@ -1,0 +1,74 @@
+:host {
+	--bs-body-font-family: 'Inter', sans-serif;
+	--bs-body-bg: #f5f7fb;
+	--dashboard-panel-bg: #ffffff;
+	--dashboard-panel-shadow: 0 0.125rem 0.375rem rgba(15, 23, 42, 0.08);
+	--dashboard-accent-violet: #7c3aed;
+	--dashboard-accent-violet-subtle: #f3e8ff;
+	--dashboard-accent-violet-border: #e9d5ff;
+	--dashboard-accent-cyan: #0891b2;
+	--dashboard-accent-cyan-subtle: #e0fcff;
+	--dashboard-accent-cyan-border: #bae6fd;
+	display: block;
+	background: var(--bs-body-bg);
+	font-family: var(--bs-body-font-family);
+}
+
+.dashboard-shell {
+	min-height: 100vh;
+}
+
+.panel {
+	background: var(--dashboard-panel-bg);
+	border-radius: 1rem;
+	box-shadow: var(--dashboard-panel-shadow);
+}
+
+.icon-badge {
+	width: 3rem;
+	height: 3rem;
+}
+
+.icon-avatar {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.icon-user-chip {
+	width: 2.25rem;
+	height: 2.25rem;
+}
+
+.quick-action {
+	border-radius: 0.75rem;
+}
+
+.min-w-0 {
+	min-width: 0;
+}
+
+.bg-accent-violet-subtle {
+	background: var(--dashboard-accent-violet-subtle);
+}
+
+.border-accent-violet-subtle {
+	border-color: var(--dashboard-accent-violet-border) !important;
+}
+
+.text-accent-violet {
+	color: var(--dashboard-accent-violet);
+}
+
+.bg-accent-cyan-subtle {
+	background: var(--dashboard-accent-cyan-subtle);
+}
+
+.border-accent-cyan-subtle {
+	border-color: var(--dashboard-accent-cyan-border) !important;
+}
+
+.text-accent-cyan {
+	color: var(--dashboard-accent-cyan);
+}
+
+

@@ -1,0 +1,21 @@
+{
+  "name": "Futbol UI Angular",
+  "image": "localhost:5000/rdg-node:1.0.0",
+  "runArgs": [
+    "--name", "futbol-ui-container"
+  ],
+  "forwardPorts": [4200],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "angular.ng-template",
+        "ms-vscode.vscode-typescript-next",
+        "eamodio.gitlens",
+        "johnpapa.angular-essentials"
+      ]
+    }
+  },
+  "postCreateCommand": "npm install -g @angular/cli && echo 'Dev container is ready for development!'"
+}
