@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Seasons - Liga MX - SoccerHub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+
+<body class="bg-[#F5F7FB]">
+
+<!-- NAVBAR -->
+<header class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Left -->
+    <div class="flex items-center gap-8">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-green-500 rounded-full flex items-center justify-center text-white">
+          <i class="fa-solid fa-futbol"></i>
+        </div>
+        <div>
+          <span class="font-semibold">SoccerHub</span>
+          <p class="text-xs text-green-500 -mt-1">Admin</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-6 text-sm text-gray-600">
+        <a>Dashboard</a>
+        <a>Leagues</a>
+        <a class="font-semibold text-green-600 border-b-2 border-green-500 pb-1">Seasons</a>
+        <a>Teams</a>
+        <a>Matches</a>
+        <a>Standings</a>
+        <a>Users</a>
+      </nav>
+    </div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-6 text-gray-500">
+      <div class="relative">
+        <i class="fa-regular fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">5</span>
+      </div>
+      <div class="text-sm">May 18, 2025</div>
+      <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm">AD</div>
+    </div>
+
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-6 py-6 space-y-6">
+
+<!-- Breadcrumb -->
+<p class="text-sm text-gray-400">Leagues > Liga MX > Seasons</p>
+
+<!-- Tabs -->
+<div class="flex gap-6 text-sm border-b pb-2">
+  <span class="text-gray-400">Overview</span>
+  <span class="text-gray-400">Teams</span>
+  <span class="text-green-600 border-b-2 border-green-500 pb-2">Seasons</span>
+  <span class="text-gray-400">Matches</span>
+  <span class="text-gray-400">Standings</span>
+  <span class="text-gray-400">Settings</span>
+</div>
+
+<!-- Header -->
+<div class="bg-white rounded-2xl p-6 shadow-sm">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-2xl font-semibold mb-1">Seasons in Liga MX</h1>
+      <p class="text-gray-500 text-sm">View and manage all seasons for this league</p>
+    </div>
+    <button class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm">+ Add Season</button>
+  </div>
+</div>
+
+<!-- Active Seasons -->
+<div class="space-y-4">
+  <h2 class="text-lg font-semibold">Active Seasons</h2>
+  
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <!-- Season Card -->
+    <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-green-500">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <h3 class="font-semibold text-lg">Clausura 2025</h3>
+          <p class="text-sm text-gray-500">Current season</p>
+        </div>
+        <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-xs">Active</span>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mb-4 text-sm">
+        <div>
+          <p class="text-gray-500 text-xs">Start Date</p>
+          <p class="font-semibold">Jan 10, 2025</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Matches</p>
+          <p class="font-semibold">136 / 306</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Progress</p>
+          <p class="font-semibold">44%</p>
+        </div>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-green-500 h-2 rounded-full" style="width: 44%"></div>
+      </div>
+      <div class="flex gap-2">
+        <button class="flex-1 bg-green-50 text-green-600 px-3 py-2 rounded-lg text-sm hover:bg-green-100">View Details</button>
+        <button class="flex-1 bg-blue-50 text-blue-600 px-3 py-2 rounded-lg text-sm hover:bg-blue-100">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Completed Seasons -->
+<div class="space-y-4">
+  <h2 class="text-lg font-semibold">Completed Seasons</h2>
+  
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <!-- Season Card -->
+    <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-blue-500">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <h3 class="font-semibold text-lg">Apertura 2024</h3>
+          <p class="text-sm text-gray-500">Previous season</p>
+        </div>
+        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs">Completed</span>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mb-4 text-sm">
+        <div>
+          <p class="text-gray-500 text-xs">End Date</p>
+          <p class="font-semibold">Dec 15, 2024</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Matches</p>
+          <p class="font-semibold">306 / 306</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Winner</p>
+          <p class="font-semibold">Tigres UANL</p>
+        </div>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-blue-500 h-2 rounded-full" style="width: 100%"></div>
+      </div>
+      <button class="w-full bg-gray-50 text-gray-600 px-3 py-2 rounded-lg text-sm hover:bg-gray-100">View Results</button>
+    </div>
+
+    <!-- Season Card -->
+    <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-blue-500">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <h3 class="font-semibold text-lg">Clausura 2024</h3>
+          <p class="text-sm text-gray-500">Previous season</p>
+        </div>
+        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs">Completed</span>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mb-4 text-sm">
+        <div>
+          <p class="text-gray-500 text-xs">End Date</p>
+          <p class="font-semibold">May 12, 2024</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Matches</p>
+          <p class="font-semibold">306 / 306</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Winner</p>
+          <p class="font-semibold">Cruz Azul</p>
+        </div>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-blue-500 h-2 rounded-full" style="width: 100%"></div>
+      </div>
+      <button class="w-full bg-gray-50 text-gray-600 px-3 py-2 rounded-lg text-sm hover:bg-gray-100">View Results</button>
+    </div>
+
+    <!-- Season Card -->
+    <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-blue-500">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <h3 class="font-semibold text-lg">Apertura 2023</h3>
+          <p class="text-sm text-gray-500">Archive</p>
+        </div>
+        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs">Completed</span>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mb-4 text-sm">
+        <div>
+          <p class="text-gray-500 text-xs">End Date</p>
+          <p class="font-semibold">Dec 10, 2023</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Matches</p>
+          <p class="font-semibold">306 / 306</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Winner</p>
+          <p class="font-semibold">Monterrey</p>
+        </div>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-blue-500 h-2 rounded-full" style="width: 100%"></div>
+      </div>
+      <button class="w-full bg-gray-50 text-gray-600 px-3 py-2 rounded-lg text-sm hover:bg-gray-100">View Results</button>
+    </div>
+
+    <!-- Season Card -->
+    <div class="bg-white rounded-2xl p-6 shadow-sm border-l-4 border-blue-500">
+      <div class="flex justify-between items-start mb-4">
+        <div>
+          <h3 class="font-semibold text-lg">Clausura 2023</h3>
+          <p class="text-sm text-gray-500">Archive</p>
+        </div>
+        <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs">Completed</span>
+      </div>
+      <div class="grid grid-cols-3 gap-4 mb-4 text-sm">
+        <div>
+          <p class="text-gray-500 text-xs">End Date</p>
+          <p class="font-semibold">May 21, 2023</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Matches</p>
+          <p class="font-semibold">306 / 306</p>
+        </div>
+        <div>
+          <p class="text-gray-500 text-xs">Winner</p>
+          <p class="font-semibold">Pachuca</p>
+        </div>
+      </div>
+      <div class="w-full bg-gray-200 rounded-full h-2 mb-4">
+        <div class="bg-blue-500 h-2 rounded-full" style="width: 100%"></div>
+      </div>
+      <button class="w-full bg-gray-50 text-gray-600 px-3 py-2 rounded-lg text-sm hover:bg-gray-100">View Results</button>
+    </div>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="grid grid-cols-4 gap-4">
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+    <div class="text-2xl font-semibold">5</div>
+    <p class="text-xs text-gray-500 mt-1">Total Seasons</p>
+  </div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+    <div class="text-2xl font-semibold">1</div>
+    <p class="text-xs text-gray-500 mt-1">Active</p>
+  </div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+    <div class="text-2xl font-semibold">4</div>
+    <p class="text-xs text-gray-500 mt-1">Completed</p>
+  </div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+    <div class="text-2xl font-semibold">1,530</div>
+    <p class="text-xs text-gray-500 mt-1">Total Matches</p>
+  </div>
+</div>
+
+</main>
+
+</body>
+</html>

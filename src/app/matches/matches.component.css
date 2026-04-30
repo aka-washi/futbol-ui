@@ -1,0 +1,197 @@
+.matches-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.header h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.view-link {
+  font-size: 13px;
+  color: #3b82f6;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.match-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 90px 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.date-card {
+  background: #f3f4f6;
+  border-radius: 12px;
+  text-align: center;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+
+.date-card .month {
+  color: #6b7280;
+}
+
+.date-card .day {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.team-card img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-name {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-card.home {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.team-card.away {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.time-card {
+  text-align: center;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 6px 4px;
+  min-width: 80px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #111827;
+}
+
+.time-card.upcoming {
+  background: #f9fafb;
+}
+
+.time-card.finished {
+  background: #eef2ff;
+  color: #1e3a8a;
+}
+
+.time-card.live {
+  background: #fff1f2;
+  color: #b91c1c;
+}
+
+.live-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+.live-text {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: #ef4444;
+  border-radius: 50%;
+  animation: pulse 1.2s infinite;
+}
+
+.value {
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.4); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Legend Container */
+.legend {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f9fafb;
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Each item */
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Dot */
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* States */
+.legend-dot.upcoming {
+  background: #9ca3af;
+}
+
+.legend-dot.live {
+  background: #ef4444;
+  box-shadow: 0 0 6px rgba(239, 68, 68, 0.6);
+}
+
+.legend-dot.finished {
+  background: #3b82f6;
+}
+
+/* Text */
+.legend-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.legend-text .label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.legend-text .description {
+  font-size: 11px;
+  color: #6b7280;
+}
