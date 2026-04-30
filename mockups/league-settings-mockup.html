@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings - Liga MX - SoccerHub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+
+<body class="bg-[#F5F7FB]">
+
+<!-- NAVBAR -->
+<header class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Left -->
+    <div class="flex items-center gap-8">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-green-500 rounded-full flex items-center justify-center text-white">
+          <i class="fa-solid fa-futbol"></i>
+        </div>
+        <div>
+          <span class="font-semibold">SoccerHub</span>
+          <p class="text-xs text-green-500 -mt-1">Admin</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-6 text-sm text-gray-600">
+        <a>Dashboard</a>
+        <a>Leagues</a>
+        <a>Seasons</a>
+        <a>Teams</a>
+        <a>Matches</a>
+        <a>Standings</a>
+        <a class="font-semibold text-green-600 border-b-2 border-green-500 pb-1">Settings</a>
+      </nav>
+    </div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-6 text-gray-500">
+      <div class="relative">
+        <i class="fa-regular fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">5</span>
+      </div>
+      <div class="text-sm">May 18, 2025</div>
+      <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm">AD</div>
+    </div>
+
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-6 py-6">
+
+<!-- Breadcrumb -->
+<p class="text-sm text-gray-400 mb-6">Leagues > Liga MX > Settings</p>
+
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+<!-- Sidebar -->
+<div class="lg:col-span-1">
+  <div class="bg-white rounded-2xl shadow-sm p-4 space-y-2 sticky top-6">
+    <a class="block px-4 py-3 rounded-lg font-semibold text-green-600 bg-green-50">General</a>
+    <a class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50">Teams & Divisions</a>
+    <a class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50">Match Rules</a>
+    <a class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50">Scoring System</a>
+    <a class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50">Tiebreakers</a>
+    <a class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50">Seasons</a>
+    <a class="block px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50">Permissions</a>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="lg:col-span-3 space-y-6">
+
+<!-- League Information -->
+<div class="bg-white rounded-2xl shadow-sm p-6">
+  <h2 class="text-xl font-semibold mb-6">League Information</h2>
+  
+  <div class="space-y-6">
+    <!-- League Name -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">League Name</label>
+      <input type="text" value="Liga MX" class="w-full px-4 py-2 border rounded-lg text-sm">
+    </div>
+
+    <!-- Country -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Country</label>
+      <input type="text" value="Mexico" class="w-full px-4 py-2 border rounded-lg text-sm">
+    </div>
+
+    <!-- League Type -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">League Type</label>
+      <select class="w-full px-4 py-2 border rounded-lg text-sm">
+        <option selected>Professional</option>
+        <option>Semi-Professional</option>
+        <option>Amateur</option>
+      </select>
+    </div>
+
+    <!-- Confederation -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Confederation</label>
+      <input type="text" value="CONCACAF" class="w-full px-4 py-2 border rounded-lg text-sm">
+    </div>
+
+    <!-- Founded Year -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Founded</label>
+      <input type="number" value="1943" class="w-full px-4 py-2 border rounded-lg text-sm">
+    </div>
+
+    <!-- Logo URL -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Logo URL</label>
+      <input type="url" value="https://picsum.photos/80" class="w-full px-4 py-2 border rounded-lg text-sm">
+    </div>
+
+    <div class="pt-4 border-t flex justify-end gap-3">
+      <button class="px-6 py-2 border rounded-lg text-sm hover:bg-gray-50">Cancel</button>
+      <button class="px-6 py-2 bg-green-600 text-white rounded-lg text-sm hover:bg-green-700">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- League Configuration -->
+<div class="bg-white rounded-2xl shadow-sm p-6">
+  <h2 class="text-xl font-semibold mb-6">League Configuration</h2>
+  
+  <div class="space-y-6">
+    <!-- Number of Teams -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Number of Teams</label>
+      <input type="number" value="18" class="w-full px-4 py-2 border rounded-lg text-sm">
+    </div>
+
+    <!-- Matches per Matchday -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Matches per Matchday</label>
+      <input type="number" value="9" class="w-full px-4 py-2 border rounded-lg text-sm">
+    </div>
+
+    <!-- Season Format -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Season Format</label>
+      <select class="w-full px-4 py-2 border rounded-lg text-sm">
+        <option selected>Two per year (Apertura/Clausura)</option>
+        <option>One per year</option>
+        <option>Custom</option>
+      </select>
+    </div>
+
+    <!-- Playoff System -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Playoff System</label>
+      <select class="w-full px-4 py-2 border rounded-lg text-sm">
+        <option selected>Liguilla (Top 8 teams)</option>
+        <option>Direct Promotion</option>
+        <option>Promotion/Relegation Playoff</option>
+        <option>None</option>
+      </select>
+    </div>
+
+    <!-- Relegation Teams -->
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Teams Relegated per Season</label>
+      <input type="number" value="2" class="w-full px-4 py-2 border rounded-lg text-sm">
+    </div>
+
+    <div class="pt-4 border-t flex justify-end gap-3">
+      <button class="px-6 py-2 border rounded-lg text-sm hover:bg-gray-50">Cancel</button>
+      <button class="px-6 py-2 bg-green-600 text-white rounded-lg text-sm hover:bg-green-700">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- Match Rules -->
+<div class="bg-white rounded-2xl shadow-sm p-6">
+  <h2 class="text-xl font-semibold mb-6">Match Rules</h2>
+  
+  <div class="space-y-4">
+    <div class="flex items-center justify-between pb-4 border-b">
+      <div>
+        <p class="font-medium text-sm">Points for Win</p>
+        <p class="text-xs text-gray-500 mt-1">Points awarded for a match victory</p>
+      </div>
+      <input type="number" value="3" class="w-20 px-3 py-2 border rounded-lg text-sm">
+    </div>
+
+    <div class="flex items-center justify-between pb-4 border-b">
+      <div>
+        <p class="font-medium text-sm">Points for Draw</p>
+        <p class="text-xs text-gray-500 mt-1">Points awarded for a drawn match</p>
+      </div>
+      <input type="number" value="1" class="w-20 px-3 py-2 border rounded-lg text-sm">
+    </div>
+
+    <div class="flex items-center justify-between pb-4 border-b">
+      <div>
+        <p class="font-medium text-sm">Points for Loss</p>
+        <p class="text-xs text-gray-500 mt-1">Points awarded for a lost match</p>
+      </div>
+      <input type="number" value="0" class="w-20 px-3 py-2 border rounded-lg text-sm">
+    </div>
+
+    <div class="flex items-center justify-between pb-4 border-b">
+      <div>
+        <p class="font-medium text-sm">Match Duration</p>
+        <p class="text-xs text-gray-500 mt-1">Minutes per match</p>
+      </div>
+      <input type="number" value="90" class="w-20 px-3 py-2 border rounded-lg text-sm">
+    </div>
+
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="font-medium text-sm">Extra Time Allowed</p>
+        <p class="text-xs text-gray-500 mt-1">Enable extra time for knockout matches</p>
+      </div>
+      <input type="checkbox" checked class="w-5 h-5 text-green-600">
+    </div>
+  </div>
+</div>
+
+<!-- Tiebreaker Rules -->
+<div class="bg-white rounded-2xl shadow-sm p-6">
+  <h2 class="text-xl font-semibold mb-6">Tiebreaker Rules</h2>
+  
+  <div class="space-y-3">
+    <p class="text-sm text-gray-600 mb-4">Teams are ranked by (in order):</p>
+    <div class="space-y-2">
+      <div class="flex items-center gap-3">
+        <span class="font-semibold text-gray-400">1.</span>
+        <span class="text-sm">Points</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="font-semibold text-gray-400">2.</span>
+        <span class="text-sm">Goal Difference</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="font-semibold text-gray-400">3.</span>
+        <span class="text-sm">Goals For</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="font-semibold text-gray-400">4.</span>
+        <span class="text-sm">Head to Head Points</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="font-semibold text-gray-400">5.</span>
+        <span class="text-sm">Head to Head Goal Difference</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="font-semibold text-gray-400">6.</span>
+        <span class="text-sm">Playoff Match</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Danger Zone -->
+<div class="bg-red-50 border border-red-200 rounded-2xl p-6">
+  <h2 class="text-xl font-semibold mb-1 text-red-600">Danger Zone</h2>
+  <p class="text-sm text-red-600 text-opacity-70 mb-6">Irreversible and destructive actions for this league</p>
+  
+  <div class="space-y-3">
+    <div class="flex items-center justify-between">
+      <div>
+        <p class="font-medium text-sm">Archive League</p>
+        <p class="text-xs text-gray-600 mt-1">Make this league read-only</p>
+      </div>
+      <button class="px-4 py-2 border border-red-300 text-red-600 rounded-lg text-sm hover:bg-red-100">Archive</button>
+    </div>
+
+    <div class="flex items-center justify-between border-t border-red-200 pt-3">
+      <div>
+        <p class="font-medium text-sm">Reset Standings</p>
+        <p class="text-xs text-gray-600 mt-1">Clear all match results for current season</p>
+      </div>
+      <button class="px-4 py-2 border border-red-300 text-red-600 rounded-lg text-sm hover:bg-red-100">Reset</button>
+    </div>
+
+    <div class="flex items-center justify-between border-t border-red-200 pt-3">
+      <div>
+        <p class="font-medium text-sm">Delete League</p>
+        <p class="text-xs text-gray-600 mt-1">Permanently delete this league and all data</p>
+      </div>
+      <button class="px-4 py-2 bg-red-600 text-white rounded-lg text-sm hover:bg-red-700">Delete</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Teams - SoccerHub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+</style>
+</head>
+
+<body class="bg-[#F5F7FB]">
+
+<!-- NAVBAR -->
+<header class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Left -->
+    <div class="flex items-center gap-8">
+      <div class="flex items-center gap-2">
+        <div class="w-9 h-9 bg-green-500 rounded-full flex items-center justify-center text-white">
+          <i class="fa-solid fa-futbol"></i>
+        </div>
+        <div>
+          <span class="font-semibold">SoccerHub</span>
+          <p class="text-xs text-green-500 -mt-1">Admin</p>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex gap-6 text-sm text-gray-600">
+        <a>Dashboard</a>
+        <a>Leagues</a>
+        <a>Seasons</a>
+        <a class="font-semibold text-green-600 border-b-2 border-green-500 pb-1">Teams</a>
+        <a>Matches</a>
+        <a>Standings</a>
+        <a>Users</a>
+      </nav>
+    </div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-6 text-gray-500">
+      <div class="relative">
+        <i class="fa-regular fa-bell"></i>
+        <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">5</span>
+      </div>
+      <div class="text-sm">May 18, 2025</div>
+      <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm">AD</div>
+    </div>
+
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-6 py-6 space-y-6">
+
+<!-- Breadcrumb -->
+<p class="text-sm text-gray-400">Teams</p>
+
+<!-- Header -->
+<div class="bg-white rounded-2xl p-6 shadow-sm">
+  <div class="flex justify-between items-center">
+    <div>
+      <h1 class="text-2xl font-semibold mb-1">Teams Management</h1>
+      <p class="text-gray-500 text-sm">Manage all teams across your leagues</p>
+    </div>
+    <button class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm">+ Add New Team</button>
+  </div>
+</div>
+
+<!-- Filters & Search -->
+<div class="bg-white rounded-2xl p-4 shadow-sm flex gap-3 items-center">
+  <input type="text" placeholder="Search teams..." class="flex-1 px-3 py-2 border rounded-lg text-sm">
+  <select class="px-3 py-2 border rounded-lg text-sm">
+    <option>All Leagues</option>
+    <option>Liga MX</option>
+    <option>MLS</option>
+  </select>
+  <select class="px-3 py-2 border rounded-lg text-sm">
+    <option>All Regions</option>
+    <option>Mexico</option>
+    <option>USA</option>
+  </select>
+  <button class="px-3 py-2 border rounded-lg text-sm">Filter</button>
+</div>
+
+<!-- Teams Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+  <!-- Team Card -->
+  <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+    <div class="flex items-start justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/48?1" class="w-12 h-12 rounded-lg object-cover">
+        <div>
+          <p class="font-semibold">Club América</p>
+          <p class="text-xs text-gray-500">Liga MX</p>
+        </div>
+      </div>
+      <button class="text-gray-400 hover:text-gray-600">•••</button>
+    </div>
+    <div class="space-y-2 text-sm mb-4">
+      <div class="flex justify-between"><span class="text-gray-500">Founded</span><span>1916</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Players</span><span>25</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Coach</span><span>André Jardine</span></div>
+    </div>
+    <button class="w-full bg-green-50 text-green-600 px-3 py-2 rounded-lg text-sm hover:bg-green-100">View Details</button>
+  </div>
+
+  <!-- Team Card -->
+  <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+    <div class="flex items-start justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/48?2" class="w-12 h-12 rounded-lg object-cover">
+        <div>
+          <p class="font-semibold">Chivas</p>
+          <p class="text-xs text-gray-500">Liga MX</p>
+        </div>
+      </div>
+      <button class="text-gray-400 hover:text-gray-600">•••</button>
+    </div>
+    <div class="space-y-2 text-sm mb-4">
+      <div class="flex justify-between"><span class="text-gray-500">Founded</span><span>1906</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Players</span><span>24</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Coach</span><span>Fernando Gago</span></div>
+    </div>
+    <button class="w-full bg-green-50 text-green-600 px-3 py-2 rounded-lg text-sm hover:bg-green-100">View Details</button>
+  </div>
+
+  <!-- Team Card -->
+  <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+    <div class="flex items-start justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/48?3" class="w-12 h-12 rounded-lg object-cover">
+        <div>
+          <p class="font-semibold">Cruz Azul</p>
+          <p class="text-xs text-gray-500">Liga MX</p>
+        </div>
+      </div>
+      <button class="text-gray-400 hover:text-gray-600">•••</button>
+    </div>
+    <div class="space-y-2 text-sm mb-4">
+      <div class="flex justify-between"><span class="text-gray-500">Founded</span><span>1927</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Players</span><span>26</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Coach</span><span>Juan Reynoso</span></div>
+    </div>
+    <button class="w-full bg-green-50 text-green-600 px-3 py-2 rounded-lg text-sm hover:bg-green-100">View Details</button>
+  </div>
+
+  <!-- Team Card -->
+  <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+    <div class="flex items-start justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/48?4" class="w-12 h-12 rounded-lg object-cover">
+        <div>
+          <p class="font-semibold">Pumas UNAM</p>
+          <p class="text-xs text-gray-500">Liga MX</p>
+        </div>
+      </div>
+      <button class="text-gray-400 hover:text-gray-600">•••</button>
+    </div>
+    <div class="space-y-2 text-sm mb-4">
+      <div class="flex justify-between"><span class="text-gray-500">Founded</span><span>1954</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Players</span><span>25</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Coach</span><span>Gustavo Lema</span></div>
+    </div>
+    <button class="w-full bg-green-50 text-green-600 px-3 py-2 rounded-lg text-sm hover:bg-green-100">View Details</button>
+  </div>
+
+  <!-- Team Card -->
+  <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+    <div class="flex items-start justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/48?5" class="w-12 h-12 rounded-lg object-cover">
+        <div>
+          <p class="font-semibold">Tigres UANL</p>
+          <p class="text-xs text-gray-500">Liga MX</p>
+        </div>
+      </div>
+      <button class="text-gray-400 hover:text-gray-600">•••</button>
+    </div>
+    <div class="space-y-2 text-sm mb-4">
+      <div class="flex justify-between"><span class="text-gray-500">Founded</span><span>1960</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Players</span><span>27</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Coach</span><span>Miguel Herrera</span></div>
+    </div>
+    <button class="w-full bg-green-50 text-green-600 px-3 py-2 rounded-lg text-sm hover:bg-green-100">View Details</button>
+  </div>
+
+  <!-- Team Card -->
+  <div class="bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition">
+    <div class="flex items-start justify-between mb-4">
+      <div class="flex items-center gap-3">
+        <img src="https://picsum.photos/48?6" class="w-12 h-12 rounded-lg object-cover">
+        <div>
+          <p class="font-semibold">Monterrey</p>
+          <p class="text-xs text-gray-500">Liga MX</p>
+        </div>
+      </div>
+      <button class="text-gray-400 hover:text-gray-600">•••</button>
+    </div>
+    <div class="space-y-2 text-sm mb-4">
+      <div class="flex justify-between"><span class="text-gray-500">Founded</span><span>1945</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Players</span><span>26</span></div>
+      <div class="flex justify-between"><span class="text-gray-500">Coach</span><span>Javier Aguirre</span></div>
+    </div>
+    <button class="w-full bg-green-50 text-green-600 px-3 py-2 rounded-lg text-sm hover:bg-green-100">View Details</button>
+  </div>
+
+</div>
+
+<!-- Stats -->
+<div class="grid grid-cols-4 gap-4">
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+    <div class="text-2xl font-semibold">256</div>
+    <p class="text-xs text-gray-500 mt-1">Total Teams</p>
+  </div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+    <div class="text-2xl font-semibold">6,144</div>
+    <p class="text-xs text-gray-500 mt-1">Total Players</p>
+  </div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+    <div class="text-2xl font-semibold">24</div>
+    <p class="text-xs text-gray-500 mt-1">Avg Players</p>
+  </div>
+  <div class="bg-white p-4 rounded-2xl shadow-sm text-center">
+    <div class="text-2xl font-semibold">18</div>
+    <p class="text-xs text-gray-500 mt-1">Avg Coaches</p>
+  </div>
+</div>
+
+</main>
+
+</body>
+</html>

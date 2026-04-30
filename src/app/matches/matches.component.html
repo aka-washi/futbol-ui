@@ -1,0 +1,76 @@
+<div class="matches-card">
+  <div class="header">
+    <h3>Matches</h3>
+    <a class="view-link">View Full Fixture</a>
+  </div>
+
+  @for (match of sortedMatches(); track match) {
+  <div class="match-row">
+
+    <!-- Date -->
+    <div class="date-card">
+      <span class="month">{{ match.date | date:'MMM' }}</span>
+      <span class="day">{{ match.date | date:'dd' }}</span>
+    </div>
+
+    <!-- Home Team -->
+    <div class="team-card home">
+      <span class="team-name">{{ match.home.name }}</span>
+      <img [src]="match.home.logo" alt="home logo" />
+    </div>
+
+    <!-- Time / Score / Result -->
+    <div class="time-card"
+         [class.upcoming]="match.status === 'upcoming'"
+         [class.live]="match.status === 'live'"
+         [class.finished]="match.status === 'finished'">
+
+      <!-- LIVE indicator -->
+      @if (match.status === 'live') {
+      <div class="live-wrapper">
+        <span class="live-dot"></span>
+        <span class="live-text">LIVE</span>
+      </div>
+      }
+
+      <span class="value">
+        {{ getDisplayValue(match) }}
+      </span>
+
+    </div>
+
+    <!-- Away Team -->
+    <div class="team-card away">
+      <img [src]="match.away.logo" alt="away logo" />
+      <span class="team-name">{{ match.away.name }}</span>
+    </div>
+
+  </div>
+  }
+</div>
+<!-- Legend -->
+<div class="legend">
+  <div class="legend-item">
+    <span class="legend-dot upcoming"></span>
+    <div class="legend-text">
+      <span class="label">UPCOMING</span>
+      <span class="description">Match hasn't started</span>
+    </div>
+  </div>
+
+  <div class="legend-item">
+    <span class="legend-dot live"></span>
+    <div class="legend-text">
+      <span class="label">LIVE</span>
+      <span class="description">Match is in progress</span>
+    </div>
+  </div>
+
+  <div class="legend-item">
+    <span class="legend-dot finished"></span>
+    <div class="legend-text">
+      <span class="label">FINISHED</span>
+      <span class="description">Match has ended</span>
+    </div>
+  </div>
+</div>
