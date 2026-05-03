@@ -15,8 +15,8 @@ export class App {
       date: new Date(2025, 4, 24),
       time: '19:00',
       status: 'upcoming',
-      home: { name: 'Club América Futbol Club', logo: 'https://picsum.photos/28?team1' },
-      away: { name: 'Guadalajara', logo: 'https://picsum.photos/28?team2' },
+      home: { name: 'América', logo: 'https://picsum.photos/28?team1' },
+      away: { name: 'Chivas', logo: 'https://picsum.photos/28?team2' },
     },
     {
       date: new Date(2025, 4, 25),
