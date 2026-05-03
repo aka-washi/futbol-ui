@@ -1,45 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120">
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+
   <style>
     :root {
-      --fut-color: #2F80ED;
-      --koru-color: #FFFFFF;
-      --pulse-color: #00FF6A;
-      --ball-fill: #FFFFFF;
-      --ball-stroke: #111111;
+      --fut-color: #1a2f6f;     /* Navy Blue */
+      --koru-color: #f5e6a8;    /* Yellow Cream */
+      --line-color: #5aa832;    /* Green heartbeat */
+      --ball-stroke: #cccccc;
     }
+
+    .fut { fill: var(--fut-color); font-weight: 700; }
+    .koru { fill: var(--koru-color); font-weight: 700; }
+    .heartbeat { stroke: var(--line-color); stroke-width: 6; fill: none; }
+    .ball { stroke: var(--ball-stroke); fill: none; stroke-width: 2; }
   </style>
 
-  <!-- Fut -->
-  <text x="20" y="55"
-        font-family="system-ui, sans-serif"
-        font-size="40"
-        font-weight="700"
-        fill="var(--fut-color)">
-    Fut
+  <!-- Text -->
+  <text x="50" y="140" font-size="90" font-family="Arial, Helvetica, sans-serif">
+    <tspan class="fut">Fut</tspan>
+    <tspan class="koru">Koru</tspan>
   </text>
 
-  <!-- Koru -->
-  <text x="125" y="55"
-        font-family="system-ui, sans-serif"
-        font-size="40"
-        font-weight="600"
-        fill="var(--koru-color)">
-    Koru
-  </text>
+  <!-- Heartbeat Line -->
+  <path class="heartbeat"
+        d="M50 200 
+           L200 200 
+           L230 170 
+           L260 230 
+           L290 160 
+           L320 220 
+           L350 200 
+           L700 200" />
 
-  <!-- Pulse -->
-  <path d="M20 80 L70 80 L85 60 L100 95 L115 75 L150 75 L190 75 L210 60 L225 90 L245 75 L290 75"
-        fill="none"
-        stroke="var(--pulse-color)"
-        stroke-width="4"
-        stroke-linecap="round"
-        stroke-linejoin="round" />
-
-  <!-- Ball -->
-  <circle cx="310" cy="75" r="10"
-          fill="var(--ball-fill)"
-          stroke="var(--ball-stroke)"
-          stroke-width="2" />
-  <path d="M310 65 L305 70 L307 77 L313 77 L315 70 Z"
-        fill="var(--ball-stroke)" />
+  <!-- Soccer Ball -->
+  <circle cx="730" cy="200" r="30" class="ball" />
+  
+  <!-- Simple inner pattern (minimal hex look) -->
+  <polygon points="730,180 745,190 740,210 720,210 715,190" class="ball"/>
+  <line x1="730" y1="180" x2="730" y2="160" class="ball"/>
+  <line x1="745" y1="190" x2="765" y2="180" class="ball"/>
+  <line x1="715" y1="190" x2="695" y2="180" class="ball"/>
 </svg>
