@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120">
+  <style>
+    :root {
+      --fut-color: #2F80ED;
+      --koru-color: #FFFFFF;
+      --pulse-color: #00FF6A;
+      --ball-fill: #FFFFFF;
+      --ball-stroke: #111111;
+    }
+  </style>
+
+  <!-- Fut -->
+  <text x="20" y="55"
+        font-family="system-ui, sans-serif"
+        font-size="40"
+        font-weight="700"
+        fill="var(--fut-color)">
+    Fut
+  </text>
+
+  <!-- Koru -->
+  <text x="125" y="55"
+        font-family="system-ui, sans-serif"
+        font-size="40"
+        font-weight="600"
+        fill="var(--koru-color)">
+    Koru
+  </text>
+
+  <!-- Pulse -->
+  <path d="M20 80 L70 80 L85 60 L100 95 L115 75 L150 75 L190 75 L210 60 L225 90 L245 75 L290 75"
+        fill="none"
+        stroke="var(--pulse-color)"
+        stroke-width="4"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+
+  <!-- Ball -->
+  <circle cx="310" cy="75" r="10"
+          fill="var(--ball-fill)"
+          stroke="var(--ball-stroke)"
+          stroke-width="2" />
+  <path d="M310 65 L305 70 L307 77 L313 77 L315 70 Z"
+        fill="var(--ball-stroke)" />
+</svg>
