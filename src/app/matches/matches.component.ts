@@ -1,5 +1,5 @@
-import { DatePipe } from '@angular/common';
-import { Component, computed, input } from '@angular/core';
+import { DatePipe, UpperCasePipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 
 export type MatchStatus = 'upcoming' | 'live' | 'finished';
 
@@ -21,14 +21,18 @@ export interface Match {
 
 @Component({
   selector: 'app-matches',
-  imports: [DatePipe],
+  imports: [DatePipe, UpperCasePipe],
   templateUrl: './matches.component.html',
-  styleUrl: './matches.component.css'
+  styleUrl: './matches.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MatchesComponent {
 
-  // ✅ Signal-based input
   matches = input<Match[]>([]);
+  columns = input(1);
+  showLegend = input(true);
+  title = input('Matches');
+  showHeader = input(true);
 
   // ✅ Derived state (reactive transformation if needed later)
   sortedMatches = computed(() => {

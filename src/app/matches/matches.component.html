@@ -1,86 +1,71 @@
 <div class="matches-card">
-  <div class="header">
-    <h3>Matches</h3>
-    <a class="view-link">View Full Fixture</a>
+  @if (showHeader()) {
+    <div class="header">
+      <h3>{{ title() }}</h3>
+      <a class="view-link">View Full Fixture</a>
+    </div>
+  }
+
+  <div class="matches-grid" [style.grid-template-columns]="'repeat(' + columns() + ', 1fr)'">
+    @for (match of sortedMatches(); track match) {
+      <div class="match-cell">
+        <div class="match-meta">
+          <span class="match-date">{{ match.date | date: 'MMM dd, yyyy' }}</span>
+          <span
+            class="status-badge"
+            [class.upcoming]="match.status === 'upcoming'"
+            [class.live]="match.status === 'live'"
+            [class.finished]="match.status === 'finished'"
+          >
+            @if (match.status === 'live') {
+              <span class="live-dot"></span>
+            }
+            {{ match.status | uppercase }}
+          </span>
+        </div>
+        <div class="match-teams">
+          <div class="team-col">
+            <img [src]="match.home.logo" [alt]="match.home.name + ' logo'" />
+            <span class="team-name">{{ match.home.name }}</span>
+          </div>
+          <div class="match-center">
+            <span class="match-value">{{ getDisplayValue(match) }}</span>
+          </div>
+          <div class="team-col">
+            <img [src]="match.away.logo" [alt]="match.away.name + ' logo'" />
+            <span class="team-name">{{ match.away.name }}</span>
+          </div>
+        </div>
+      </div>
+    }
   </div>
 
-  @for (match of sortedMatches(); track match) {
-    <div class="match-row">
-      <!-- Date -->
-      <div class="date-card">
-        <span class="month">{{ match.date | date: 'MMM' }}</span>
-        <span class="day">{{ match.date | date: 'dd' }}</span>
+  @if (showLegend()) {
+    <!-- Legend -->
+    <div class="legend">
+      <div class="legend-item">
+        <span class="legend-dot upcoming"></span>
+        <div class="legend-text">
+          <span class="label">UPCOMING</span>
+          <span class="description">Match hasn't started</span>
+        </div>
       </div>
 
-      <!-- Home Team -->
-      <div class="team-card home">
-        <span class="team-name">{{ match.home.name }}</span>
-        <img [src]="match.home.logo" alt="home logo" />
+      <div class="legend-item">
+        <span class="legend-dot live"></span>
+        <div class="legend-text">
+          <span class="label">LIVE</span>
+          <span class="description">Match is in progress</span>
+        </div>
       </div>
 
-      <!-- Time / Score / Result -->
-      <div
-        class="time-card"
-        [class.upcoming]="match.status === 'upcoming'"
-        [class.live]="match.status === 'live'"
-        [class.finished]="match.status === 'finished'"
-      >
-        <!-- Status indicator -->
-        @if (match.status === 'live') {
-          <div class="live-wrapper">
-            <span class="live-dot"></span>
-            <span class="live-text">LIVE</span>
-          </div>
-        }
-        @if (match.status === 'upcoming') {
-          <div class="live-wrapper">
-            <span class="upcoming-dot"></span>
-            <span class="live-text">UPCOMING</span>
-          </div>
-        }
-        @if (match.status === 'finished') {
-          <div class="live-wrapper">
-            <span class="finished-dot"></span>
-            <span class="live-text">FINISHED</span>
-          </div>
-        }
-
-        <span class="value">
-          {{ getDisplayValue(match) }}
-        </span>
-      </div>
-
-      <!-- Away Team -->
-      <div class="team-card away">
-        <img [src]="match.away.logo" alt="away logo" />
-        <span class="team-name">{{ match.away.name }}</span>
+      <div class="legend-item">
+        <span class="legend-dot finished"></span>
+        <div class="legend-text">
+          <span class="label">FINISHED</span>
+          <span class="description">Match has ended</span>
+        </div>
       </div>
     </div>
   }
-  <!-- Legend -->
-  <div class="legend">
-    <div class="legend-item">
-      <span class="legend-dot upcoming"></span>
-      <div class="legend-text">
-        <span class="label">UPCOMING</span>
-        <span class="description">Match hasn't started</span>
-      </div>
-    </div>
-
-    <div class="legend-item">
-      <span class="legend-dot live"></span>
-      <div class="legend-text">
-        <span class="label">LIVE</span>
-        <span class="description">Match is in progress</span>
-      </div>
-    </div>
-
-    <div class="legend-item">
-      <span class="legend-dot finished"></span>
-      <div class="legend-text">
-        <span class="label">FINISHED</span>
-        <span class="description">Match has ended</span>
-      </div>
-    </div>
-  </div>
 </div>
